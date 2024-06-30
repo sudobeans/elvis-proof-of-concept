@@ -27,6 +27,3 @@ pub unsafe extern "C" fn recv(machine: *mut ()) -> u8 {
     machine.0
 }
 
-pub fn main() {
-    println!("Skbidi ohio");
-}
