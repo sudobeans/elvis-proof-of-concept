@@ -19,8 +19,6 @@ impl CMachine {
         let align = size.next_power_of_two();
         assert!(size <= align, "tried to allocate machine too large");
 
-        println!("{}", lib.machine_size());
-
         let layout = Layout::from_size_align(size as usize, align as usize).unwrap();
 
         let ptr;
