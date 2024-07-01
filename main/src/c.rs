@@ -24,6 +24,7 @@ impl CMachine {
         let ptr;
         unsafe {
             ptr = std::alloc::alloc(layout) as *mut ();
+            assert!(!ptr.is_null());
             lib.allocate_machine(ptr);
         }
 
